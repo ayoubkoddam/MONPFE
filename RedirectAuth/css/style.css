@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Francois+One|Play');
+
+html, body, section {
+	height: 100%;
+}
+body {
+	color: #fff;
+	text-align: center;
+}
+div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.xop-container {
+	display: flex;
+}
+div {
+	flex-direction: column;
+	justify-content: center;
+}
+ 
+.xop-left {
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(etudiant_BG.jpg);
+	background-size: cover;
+	background-position: center;
+	flex: 1;
+	padding: 1rem;
+	transition: all .2s ease-in-out;
+  text-transform: uppercase;
+  filter: grayscale(0%);
+}
+ 
+.xop-right {
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(enseignant_BG.jpg);
+	background-size: cover;
+	background-position: center;
+	flex: 1;
+	padding: 1rem;
+	transition: all .2s ease-in-out;
+  text-transform: uppercase;
+  filter: hue-rotate(0deg);
+}
+.xop-left:hover, .xop-right:hover {
+	transform: scale(0.95);
+  filter: hue-rotate(0deg);
+}
+.xop-container h1 {
+	letter-spacing: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+	font-size: 3rem;
+	font-weight: 100;
+}
+.xop-button {
+	border-radius: 2px;
+	color: #fff;
+	background-color: #333;
+	padding: 10px 6px;
+	margin: 0 1%;
+	text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+  letter-spacing: 1px;
+	display: inline-block;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.5s;
+	width: 150px;
+}
+ 
+.xop-button:hover {
+	background: #fff;
+	color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .xop-container {
+    flex-direction: column;
+  }
+
+}
+
+
+a {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0px solid white;
+  border-radius: 8px;
+  height: 2.5em;
+  width: 2.5em;
+  padding: 0;
+  outline: none;
+  overflow: hidden;
+  color: white;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+  line-height: 240%;
+  background: rgba(59,173,227,1);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+}
+a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  line-height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+a:hover {
+  color: #fff;
+}
+a:hover::before {
+  box-shadow: inset 0 0 0 10em none;
+  background: rgba(59,173,227,1);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+}
